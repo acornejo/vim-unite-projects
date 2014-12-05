@@ -31,7 +31,7 @@ let s:unite_source = {
       \ }
 
 let g:unite_project_list_command =
-    \ get(g:, 'unite_project_list_command', 'find ~/devel -type d -name .git -maxdepth 2 | sed -e "s#/.git##g"')
+    \ get(g:, 'unite_project_list_command', 'find ~/devel -type d -name .git -maxdepth 3 | sed -e "s#/.git##g"')
 
 function! s:unite_source.gather_candidates(args, context)
   let dirlist = split(system(g:unite_project_list_command),'\n')
