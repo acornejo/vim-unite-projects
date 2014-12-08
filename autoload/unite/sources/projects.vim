@@ -31,7 +31,7 @@ let s:unite_source = {
       \ }
 
 let g:unite_project_folder =
-    \ get(g:, 'unite_project_folder', '~/devel')
+    \ get(g:, 'unite_project_folder', '~')
 let g:unite_project_list_command =
     \ substitute(get(g:, 'unite_project_list_command', 'find %s -type d -name .git -maxdepth 3 | sed -e "s#/.git##g"'), "%s", g:unite_project_folder, "")
 
